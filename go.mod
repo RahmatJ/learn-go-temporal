@@ -6,6 +6,7 @@ require (
 	github.com/gofiber/fiber/v2 v2.51.0
 	github.com/rs/zerolog v1.31.0
 	go.temporal.io/sdk v1.25.1
+	go.uber.org/multierr v1.1.0
 )
 
 require (

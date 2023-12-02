@@ -17,7 +17,8 @@ func NewWorkflowHandler(app *fiber.App, useCase usecase.WorkflowUseCase) {
 		workflowUC: useCase,
 	}
 
-	app.Post("/workflow/start", handler.startWorkflow)
+	baseGroup := app.Group("/workflow")
+	baseGroup.Post("/start", handler.startWorkflow)
 }
 
 func (w *workflow) startWorkflow(ctx *fiber.Ctx) error {
